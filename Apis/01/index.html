@@ -116,10 +116,12 @@
       const id = document.getElementById("editId").value;
 
       if (!name || !email || !description || !laptop || !password) {
-        alert("Both fields are required.");
+        alert("All fields are required.");
         return;
       }
 
+
+      
       if (id) {
         await fetch(`${API_URL}/${id}`, {
           method: 'PUT',
